@@ -1,0 +1,8 @@
+{
+  "name": "BLOCK BLAST: THE GAME",
+  "description": "Susun Balokmu. Pecahkan Rekormu! A colorful, satisfying 2D block puzzle arcade game with combo blasts, classic, time attack, and daily challenge modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
