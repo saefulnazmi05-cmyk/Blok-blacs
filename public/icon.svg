@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#090D1A"/>
+    </linearGradient>
+
+    <!-- Block 1: Cyan -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <!-- Block 2: Amber -->
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Block 3: Emerald -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Block 4: Rose/Purple -->
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+
+    <!-- Specular Sheen -->
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#38BDF8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Base App Background (Squircle) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect x="12" y="12" width="488" height="488" rx="100" fill="none" stroke="#334155" stroke-width="4" stroke-opacity="0.5"/>
+
+  <!-- Centered Block Group with Shadow -->
+  <g filter="url(#shadow)" transform="translate(106, 106)">
+    <!-- Top Left: Cyan Block -->
+    <g transform="translate(10, 10)">
+      <rect width="130" height="130" rx="26" fill="url(#cyanGrad)"/>
+      <rect x="8" y="8" width="114" height="56" rx="18" fill="url(#sheen)"/>
+      <rect x="8" y="8" width="114" height="114" rx="20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Top Right: Amber Block -->
+    <g transform="translate(160, 10)">
+      <rect width="130" height="130" rx="26" fill="url(#amberGrad)"/>
+      <rect x="8" y="8" width="114" height="56" rx="18" fill="url(#sheen)"/>
+      <rect x="8" y="8" width="114" height="114" rx="20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Bottom Left: Emerald Block -->
+    <g transform="translate(10, 160)">
+      <rect width="130" height="130" rx="26" fill="url(#emeraldGrad)"/>
+      <rect x="8" y="8" width="114" height="56" rx="18" fill="url(#sheen)"/>
+      <rect x="8" y="8" width="114" height="114" rx="20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Bottom Right: Rose Block -->
+    <g transform="translate(160, 160)">
+      <rect width="130" height="130" rx="26" fill="url(#roseGrad)"/>
+      <rect x="8" y="8" width="114" height="56" rx="18" fill="url(#sheen)"/>
+      <rect x="8" y="8" width="114" height="114" rx="20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Little Golden Sparkles -->
+  <!-- Top Right Sparkle -->
+  <path d="M 405 95 Q 405 125 435 125 Q 405 125 405 155 Q 405 125 375 125 Q 405 125 405 95 Z" fill="#FDE047"/>
+  <circle cx="405" cy="125" r="4" fill="#FFFFFF"/>
+
+  <!-- Bottom Left Sparkle -->
+  <path d="M 95 385 Q 95 405 115 405 Q 95 405 95 425 Q 95 405 75 405 Q 95 405 95 385 Z" fill="#38BDF8"/>
+  <circle cx="95" cy="405" r="3" fill="#FFFFFF"/>
+</svg>

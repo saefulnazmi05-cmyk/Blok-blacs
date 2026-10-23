@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Play, RotateCcw, Home, Volume2, VolumeX, Music } from 'lucide-react';
+import { PWAInstallBanner } from './PWAInstallBanner';
 
 interface PauseModalProps {
   score: number;
@@ -109,6 +110,11 @@ export const PauseModal: React.FC<PauseModalProps> = ({
             <Home className="w-4 h-4" />
             <span>Exit to Main Menu</span>
           </button>
+        </div>
+
+        {/* PWA Install Button inside Pause Modal */}
+        <div className="mt-4 pt-3 border-t border-slate-800/80 w-full flex justify-center">
+          <PWAInstallBanner variant="compact-button" />
         </div>
       </div>
     </div>

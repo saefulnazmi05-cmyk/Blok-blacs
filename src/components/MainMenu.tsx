@@ -6,6 +6,7 @@
 import React from 'react';
 import { Play, HelpCircle, Trophy, Volume2, VolumeX, Music, Clock, Calendar, Sparkles } from 'lucide-react';
 import { GameMode } from '../types/game';
+import { PWAInstallBanner } from './PWAInstallBanner';
 
 interface MainMenuProps {
   bestScore: number;
@@ -60,8 +61,10 @@ export const MainMenu: React.FC<MainMenuProps> = ({
           </div>
         </div>
 
-        {/* Audio toggles */}
-        <div className="flex items-center gap-2">
+        {/* Top bar actions: PWA Install & Audio toggles */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <PWAInstallBanner variant="compact-button" />
+
           <button
             onClick={onToggleMusic}
             className={`w-9 h-9 rounded-xl border flex items-center justify-center transition active:scale-95 ${
@@ -174,6 +177,11 @@ export const MainMenu: React.FC<MainMenuProps> = ({
           <HelpCircle className="w-4 h-4" />
           <span>How to Play & Rules</span>
         </button>
+
+        {/* Dedicated PWA Install Banner Slot (Non-overlapping, responsive) */}
+        <div className="w-full mt-2">
+          <PWAInstallBanner variant="menu-inline" />
+        </div>
       </div>
 
       {/* Footer Info & Control Hint */}
